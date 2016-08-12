@@ -1,6 +1,8 @@
 # -*- coding: utf8 -*-
 
 from coin_quotation import CoinQuotation
+from adv_cash_quotation import AdvCashQuotation
+
 import datetime
 
 moedas = CoinQuotation()
@@ -51,6 +53,14 @@ while reimprime == "S":
     print("      Ok Coin : %.3f" % okcoin)
     print("")
     print(u"Menor Preço Internacional: %s" % menor)
+    print("=" * 30)
+
+
+    print(u"\tCOTAÇÃO CARTÃO BITCOIN:")
+    adv_cash = AdvCashQuotation()
+    
+    print("AdvCash(Card) : %.3f" % adv_cash.get_from_usd())
+    print("")
     print("=" * 30)
     print("\n\n")
 
